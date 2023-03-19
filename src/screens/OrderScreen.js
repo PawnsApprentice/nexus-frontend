@@ -55,7 +55,9 @@ const OrderScreen = () => {
     }
     const addPayPalScript = async () => {
       try {
-        const { data: clientId } = await axios.get("/api/config/paypal");
+        const { data: clientId } = await axios.get(
+          "https://nexus-api-00xt.onrender.com/api/config/paypal"
+        );
         setInitialOptions({
           "client-id": clientId,
           currency: "USD",
